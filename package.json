@@ -8,6 +8,7 @@
   "license": "BSD",
   "dependencies": {
     "express": "4.13.4",
+    "http-proxy": "^1.16.2",
     "socket.io": "^1.7.2"
   },
   "scripts": {

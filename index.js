@@ -73,3 +73,13 @@ io.on('connection', function (socket) {
     }
   });
 });
+
+var http = require('http');
+var httpProxy = require('http-proxy');
+
+httpProxy.createProxyServer({
+  target:'http://localhost:3000',
+  ws: false
+}).listen(3001, function () {
+  console.log('Proxy listening at port 3001');
+});
