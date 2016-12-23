@@ -23,6 +23,8 @@ $(function() {
   var lastTypingTime;
   var $currentInput = $usernameInput.focus();
 
+  var s = io();
+
   var socket = io({
     transports: [
       'flashsocket',
