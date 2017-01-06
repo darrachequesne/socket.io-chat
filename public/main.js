@@ -279,4 +279,10 @@ $(function() {
     log('attempt to reconnect has failed');
   });
 
+  socket.on('binary', function (buf) {
+    var view = new DataView(buf);
+    console.log('byteLength:', view.byteLength, 'uint8:', view.getUint8());
+    // prints "byteLength: 1 uint8: 42"
+  })
+
 });

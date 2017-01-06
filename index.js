@@ -72,4 +72,14 @@ io.on('connection', function (socket) {
       });
     }
   });
+
+  function sendBuffer(){
+    var buf = new Buffer(1);
+    buf.writeUInt8(42, 0, 1);
+
+    io.emit("binary", buf);
+  }
+
+  setInterval(sendBuffer, 2000);
+
 });
